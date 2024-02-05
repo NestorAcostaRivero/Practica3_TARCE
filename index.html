@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Conferencia TARCE</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+<div id="container">
+    <h1><span>CONFERENCIA TARCE</span></h1>
+
+    <div class="videos">
+        <div id="localVideoContainer" class="video-wrapper">
+            <div class="video-label">Tú</div>
+            <video id="localVideo" playsinline autoplay muted></video>
+            <div id="muteIndicator" class="mute-indicator">
+                <img src="https://static-00.iconduck.com/assets.00/mute-icon-2048x2048-paujyku9.png" alt="Mute Indicator">
+            </div>
+            <div id="aVIndicator"><span>¡Ahora Vuelvo!</span></div>
+            <div id="holaIndicator"><span>Hola</span></div>
+            <div id="adiosIndicator"><span>Adios</span></div>
+            <div id="levManoIndicator"><span>✋</span></div>
+        </div>
+        <div id="remoteVideoContainer" class="video-wrapper">
+            <div class="video-label">Invitado</div>
+            <video id="remoteVideo" playsinline autoplay></video>
+            <div id="remoteMuteIndicator" class="remote-mute-indicator">
+                <img src="https://static-00.iconduck.com/assets.00/mute-icon-2048x2048-paujyku9.png" alt="Mute Indicator">
+            </div>
+            <div id="remoteAVIndicator" class="remote-mute-indicator"><span>¡Ahora Vuelvo!</span></div>
+            <div id="remoteHolaIndicator"><span>Hola</span></div>
+            <div id="remoteAdiosIndicator"><span>Adios</span></div>
+            <div id="remoteLevManoIndicator"><span>✋</span></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="startButton">Comenzar</button>
+        <button id="hangupButton">Colgar</button>
+        <button id="muted">Mutearse</button>
+    </div>
+
+    <div class="sub-container">
+        <p><strong>Reacciones</strong></p>
+        <div class="message">
+            <button class="reacciones" id="aV">¡Ahora Vuelvo!</button>
+            <button class="reacciones" id="hola">Hola</button>
+            <button class="reacciones" id="adios">Adios</button>
+            <button class="reacciones" id="lev-mano">Levantar la mano✋</button>
+        </div>
+    </div>
+    
+    <p>Abrir la aplicación en dos pestañas, y presionar el botón comenzar.</p>
+</div>
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="js/main.js" async></script>
+<script src="js/lib/ga.js"></script>
+</body>
+</html>
